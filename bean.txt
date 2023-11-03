@@ -1,0 +1,9 @@
+JavaBeans
+EJB - session, message driven(mdb for jms), entity
+Managed bean - jsf framework
+jsf backing beans
+jpa entities/beans
+mbeans(managed beans) - jmx
+singleton beans
+resource adaptor beans
+custom-bean

@@ -1,0 +1,63 @@
+Contexts:
+
+The "C" in CDI stands for "Contexts." Contexts represent the lifecycle of a bean (component) and how long it should exist. CDI defines several contexts, including the following:
+Request Context: Scoped to an HTTP request. Beans in this context are created and destroyed for each HTTP request.
+Session Context: Scoped to an HTTP session. Beans in this context are created when an HTTP session is created and destroyed when the session ends.
+Application (Singleton) Context: Scoped to the application's lifecycle. Beans in this context are created when the application starts and destroyed when the application stops.
+
+
+
+
+Dependency Injection:
+
+CDI provides a powerful dependency injection mechanism, allowing beans to request and receive dependencies (other beans) without needing to manually instantiate or manage them. This promotes a highly decoupled and modular architecture.
+The @Inject annotation is used to inject dependencies into a bean. CDI automatically resolves and injects the correct instance based on the context and other qualifiers.
+
+
+
+
+Bean Discovery and Scopes:
+
+CDI uses annotations to discover and categorize beans. Commonly used annotations include:
+@Named: Identifies a bean for use in JSF (JavaServer Faces) views.
+@ApplicationScoped, @RequestScoped, @SessionScoped: Specifies the bean's lifecycle.
+@Dependent: The default scope for most beans.
+@Qualifier: Allows you to create custom qualifiers to further specify bean selection.
+
+
+
+
+Events:
+
+CDI allows beans to communicate with each other through the event mechanism. Beans can publish events, and other beans can observe and react to those events.
+The @Produces and @Observes annotations are used for this purpose.
+
+
+
+
+Interceptors:
+
+CDI provides interceptors, which are a way to add cross-cutting concerns (e.g., logging, security, profiling) to methods of beans.
+Interceptors are specified using the @Interceptor and @Interceptors annotations.
+
+
+
+
+Producers:
+
+Producers allow you to create and manage bean instances that are not managed by CDI. This is useful for integrating with third-party libraries or creating complex objects.
+The @Produces annotation is used to define producer methods.
+
+
+
+
+Decorators:
+
+CDI decorators allow you to wrap and modify the behavior of beans. Decorators are used for implementing the Decorator Design Pattern.
+The @Decorator annotation is used to specify a decorator bean.
+
+
+
+Bean Validation:
+
+CDI integrates with the Java Bean Validation API, allowing you to apply validation constraints to bean properties using annotations such as @NotNull, @Size, and others.

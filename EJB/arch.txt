@@ -1,0 +1,63 @@
+EJB Container:
+
+At the core of the EJB architecture is the EJB container, which is a runtime environment provided by the Java EE server. 
+The EJB container manages the lifecycle, security, and transactions of EJB components. It provides services such as threading, persistence, and remoting to EJBs.
+
+
+
+
+
+EJB Component Types:
+
+EJB supports several component types, each serving a specific purpose:
+Session Beans: These are lightweight components that encapsulate business logic. Session beans can be stateless (no conversational state) or stateful (maintain conversational state for a client).
+Message-Driven Beans (MDBs): These are used for asynchronous processing of messages. They are typically used with JMS (Java Message Service) for message-driven architecture.
+Entity Beans (deprecated in EJB 3.x): These were used to represent persistent data in a database. In EJB 3.x and later, the persistence model is handled by the Java Persistence API (JPA).
+Singleton Beans: Introduced in EJB 3.x, singleton beans provide a single instance per application for managing shared resources or singleton services.
+
+
+
+
+
+EJB Interfaces:
+
+EJBs expose interfaces to client components that define the methods that can be called on the EJB. There are two types of EJB interfaces:
+Local Interfaces: Used when the EJB is co-located with the client in the same JVM.
+Remote Interfaces: Used when the EJB and client are in separate JVMs and communicate over a network.
+
+
+
+
+
+Client:
+
+Clients are components or applications that invoke methods on EJBs. They may be other EJBs, web components (servlets, JSPs), or standalone Java applications.
+
+
+
+
+EJB Container Services:
+
+EJB containers provide various services to EJB components, including:
+Transaction Management: EJB containers support declarative and programmatic transaction management.
+Security: EJB containers enforce security policies, and you can define access control through annotations and deployment descriptors.
+Lifecycle Management: The container manages the creation, invocation, and destruction of EJB instances.
+Pooling: For session beans, the container often pools instances to improve performance and resource management.
+Remoting: EJB components can be accessed remotely over RMI (Remote Method Invocation) or other protocols.
+Concurrency Control: The container can handle thread safety and concurrency for session beans.
+
+
+
+
+
+EJB Deployment Descriptor:
+
+Configuration information for EJBs is specified in deployment descriptors (XML files) or using annotations in EJB 3.x and later. These descriptors define transaction attributes, security settings, and other metadata.
+
+
+
+
+
+Persistence (For Entity Beans):
+
+In older versions of EJB, entity beans were used for persistence, but with the introduction of EJB 3.x, the Java Persistence API (JPA) is now used for managing entity persistence in a more developer-friendly way.
