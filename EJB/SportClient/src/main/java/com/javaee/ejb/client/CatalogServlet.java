@@ -13,7 +13,6 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet("/catalogServlet")
 public class CatalogServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 8094765542176555872L;
@@ -39,5 +38,10 @@ public class CatalogServlet extends HttpServlet {
 		String manufacturer = request.getParameter("manufacturer");
 
 		this.catalogBean.addItem(new CatalogItem(id, name, manufacturer));
+		
+		List<CatalogItem> items = this.catalogBean.getItems();
+		for (CatalogItem catalogItem : items) {
+			response.getWriter().println(catalogItem);
+		}
 	}
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>SportsCatalogClient</name>
+	<name>SportClient</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -30,7 +30,7 @@
 	</natures>
 	<filteredResources>
 		<filter>
-			<id>1699736938242</id>
+			<id>1699820593813</id>
 			<name></name>
 			<type>30</type>
 			<matcher>
