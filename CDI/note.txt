@@ -1,1 +1,2 @@
 bean discovery mode
+scopes - @RequestScoped, @SessionScoped, @ApplicationScoped, @Dependent
