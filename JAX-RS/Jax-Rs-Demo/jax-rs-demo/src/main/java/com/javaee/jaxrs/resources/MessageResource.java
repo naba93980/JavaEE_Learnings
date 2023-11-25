@@ -12,6 +12,7 @@ import jakarta.ws.rs.POST;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.PathParam;
 import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.QueryParam;
 import jakarta.ws.rs.core.MediaType;
 
 @Path("/messages")
@@ -23,6 +24,13 @@ public class MessageResource {
 	@Produces(MediaType.APPLICATION_JSON)
 	public List<Message> getMessages() {
 		return messageService.getAllMessages();
+	}
+	
+	@GET
+	@Path("/{idd}")
+	@Produces(MediaType.APPLICATION_JSON)
+	public List<Message> getMessagesById(@QueryParam("idd") int idd) {
+		return messageService.getAllMessages(idd);
 	}
 	
 	@GET

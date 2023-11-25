@@ -54,10 +54,13 @@
 			<groupId>org.glassfish.jersey.media</groupId>
 			<artifactId>jersey-media-jaxb</artifactId>
 		</dependency>
+		<!--
+		https://mvnrepository.com/artifact/org.glassfish.jersey.media/jersey-media-json-jackson -->
 		<dependency>
 			<groupId>org.glassfish.jersey.media</groupId>
 			<artifactId>jersey-media-json-jackson</artifactId>
-			</dependency>
+		</dependency>
+	
 
 
 		<!-- uncomment this to get JSON support
@@ -71,4 +74,13 @@
 		<jersey.version>3.1.0</jersey.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
+	<distributionManagement>
+		<repository>
+			<uniqueVersion>false</uniqueVersion>
+			<id>jax-rs-demo</id>
+			<name>jax-rs-demo</name>
+			<url>file:///C:/Users/NABAJYOTI/.m2/repository/com/javaee/jaxrs/jax-rs-demo/1.0-SNAPSHOT/jax-.0-SNAPSHOT.war</url>
+			<layout>default</layout>
+		</repository>
+	</distributionManagement>
 </project>
