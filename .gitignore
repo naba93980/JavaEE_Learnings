@@ -2,3 +2,4 @@
 .settings
 *.jar
 build
+.vscode
